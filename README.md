@@ -20,14 +20,18 @@ In this coding challenge you will implement an application which accepts an inpu
 ## Tasks
 
 1. Read this documentation.
-1. Fork the repository.
+1. Clone (do not fork) the repository.
 1. Understand the provided code.
 1. Implement a `TextField` accepting a `name`.
     - make sure to verify that no invalid input (e.g. numbers) has been inserted!
 1. Implement a `Button`.
 1. Implement the compution of the request whenever the `onPressed` of the button is triggered.
 1. Show the response of the simulated backend.
-1. Send us a link to your forked repository.
+1. Upload your code to a new repository 
+    - do not create a fork
+    - do not create a pull request
+1. send us the link to your repository with the solution
+    - if you don't like the idea of your solution to be publicly available make sure to create a private repository and invite [JensHor](https://github.com/jenshor).
 
 ## Additional info
 
