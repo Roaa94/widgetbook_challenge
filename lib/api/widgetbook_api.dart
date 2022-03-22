@@ -1,9 +1,12 @@
 import 'dart:math';
 
+/// An exception thrown by [WidgetbookApi].
+class UnexpectedException with Exception {}
+
 /// A class simulating an API wrapper.
 ///
-/// HINT: Be aware that the implementation might throw unexpected
-/// [ArgumentError]s.
+/// HINT: Be aware that the implementation might throw
+/// [UnexpectedException]s.
 class WidgetbookApi {
   /// Creates a new instance of [WidgetbookApi].
   WidgetbookApi({
@@ -23,13 +26,13 @@ class WidgetbookApi {
 
   /// An implementation of a flaky backend implementation.
   /// Returns a "Hello [message]" with a probability of about .66
-  /// or throws an [ArgumentError] otherwise.
+  /// or throws an [UnexpectedException] otherwise.
   Future<String> _simulateFaultyBackendImplementation({
     required String message,
   }) async {
     final number = randomNumberGenerator.nextInt(3);
     if (number.isOdd) {
-      throw ArgumentError();
+      throw UnexpectedException();
     }
 
     return 'Hello $message';
@@ -39,7 +42,7 @@ class WidgetbookApi {
   ///
   /// This is used to simulate a slow network connection.
   Future<void> _simulateSlowNetworkConnection({
-    int seconds = 3,
+    int seconds = 1,
   }) {
     return Future.delayed(
       Duration(

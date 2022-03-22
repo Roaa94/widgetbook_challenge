@@ -34,7 +34,7 @@ In this coding challenge you will implement an application which accepts an inpu
 - You are allowed to use any package available on [pub.dev](https://pub.dev).
 - You are allowed to create additional `Widget`s and classes.
 - We do not expect a fancy design. For UI components, you can use Material or Cupertino widgets. 
-- Please do not fix any errors in the `WidgetbookApi` class.
+- Please do not modify the `WidgetbookApi` class.
 - Make sure to submit a solution from which you'd say that it is embracing standard software development patterns and practices. 
 
 ## Questions?
