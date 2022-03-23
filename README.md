@@ -2,7 +2,7 @@
 
 This flutter app represents a coding challenge for Flutter enthusiasts applying for a job at [Widgetbook](https://widgetbook.io). 
 
-If you just stumled upon this repository for any other reason, you are welcome to participate in the challenge to cure your boredom. But make sure to send us an application after finishing 💪🏻
+If you just stumbled upon this repository for any other reason, you are welcome to participate in the challenge to cure your boredom. But make sure to send us an application after finishing 💪🏻
 
 ## Requirements
 
@@ -10,10 +10,10 @@ The app has been created with `flutter 2.10.3` (`dart 2.16.1`).
 
 ## Assignment
 
-In this coding challenge you will implement an application which accepts an input from the user and sends the input to a simulated backend. The flow of the user is the following:
+In this coding challenge, you will implement an application which accepts an input from the user and sends the input to a simulated backend. The flow of the user is the following:
 
 1. The user is greeted on the home screen with the provided `Scaffold` which hosts a `TextField` and a submission `Button`. 
-1. The user inserts a name into the `TextField` and presses the `Button` to send the request to the simulated backend. Make
+1. The user inserts a name into the `TextField` and presses the `Button` to send the request to the simulated backend.
 1. The application computes the request, while the UI waits for the response. 
 1. Once the request finished, the message of the response is shown in the UI below the submission button. If any error occurs while requesting from the server, an error message is shown instead.
 
@@ -43,6 +43,6 @@ In this coding challenge you will implement an application which accepts an inpu
 
 ## Questions?
 
-- If you have any questions regarding this assignment let us know within an issue!
+- If you have any questions regarding this assignment, let us know within an issue!
 
 ## Have fun! 
