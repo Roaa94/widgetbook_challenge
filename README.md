@@ -30,7 +30,7 @@ In this coding challenge, you will implement an application which accepts an inp
 1. Upload your code to a new repository 
     - do not create a fork
     - do not create a pull request
-1. send us the link to your repository with the solution
+1. [send us the link](mailto:jens@widgetbook.io) to your repository with the solution
     - if you don't like the idea of your solution to be publicly available make sure to create a private repository and invite [JensHor](https://github.com/jenshor).
 
 ## Additional info
