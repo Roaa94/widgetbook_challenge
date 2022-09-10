@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgetbook_challenge/form_page.dart';
+import 'package:widgetbook_challenge/form/views/pages/form_page.dart';
 
 /// The app.
 class App extends StatelessWidget {
