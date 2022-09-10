@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:widgetbook_challenge/core/exceptions/custom_exception.dart';
 
 /// Riverpod provider for the [NameFormService]
 final nameFormServiceProvider = Provider<NameFormService>(
@@ -11,7 +12,7 @@ class NameFormService {
   Future<void> submit(String name) async {
     await Future<dynamic>.delayed(const Duration(seconds: 1));
     if (name.contains(RegExp('[0-9]'))) {
-      throw Exception('Name should not contain numbers!');
+      throw CustomException('Name should not contain numbers!');
     }
   }
 }

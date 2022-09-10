@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:widgetbook_challenge/core/enums/request_status.dart';
+import 'package:widgetbook_challenge/core/exceptions/custom_exception.dart';
 import 'package:widgetbook_challenge/form/services/name_form_service.dart';
 
 /// The Name Form Widget
@@ -36,7 +37,7 @@ class _NameFormState extends ConsumerState<NameForm> {
     } catch (e) {
       setState(() {
         requestStatus = RequestStatus.error;
-        message = e.toString();
+        message = e is CustomException ? e.message : e.toString();
       });
     }
   }
