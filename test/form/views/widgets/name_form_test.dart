@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
+import 'package:widgetbook_challenge/api/widgetbook_api.dart';
+import 'package:widgetbook_challenge/core/api_provider.dart';
 import 'package:widgetbook_challenge/form/views/widgets/name_form.dart';
+
+import '../../../mocks.dart';
 
 void main() {
   testWidgets(
@@ -44,9 +49,17 @@ void main() {
   testWidgets(
     'shows success message for valid name',
     (WidgetTester tester) async {
+      const name = 'Roaa';
+      final mockRandom = MockRandom();
+      final api = WidgetbookApi(randomNumberGenerator: mockRandom);
+      when(() => mockRandom.nextInt(3)).thenReturn(2);
+
       await tester.pumpWidget(
-        const ProviderScope(
-          child: MaterialApp(
+        ProviderScope(
+          overrides: [
+            apiProvider.overrideWithValue(api),
+          ],
+          child: const MaterialApp(
             home: Scaffold(
               body: NameForm(),
             ),
@@ -54,10 +67,10 @@ void main() {
         ),
       );
 
-      await tester.enterText(find.byType(TextFormField), 'Roaa');
+      await tester.enterText(find.byType(TextFormField), name);
       await tester.tap(find.byType(ElevatedButton));
       await tester.pumpAndSettle();
-      expect(find.text('Submitted successfully!'), findsOneWidget);
+      expect(find.text('Hello $name'), findsOneWidget);
     },
   );
 }

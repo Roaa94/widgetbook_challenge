@@ -29,10 +29,11 @@ class _NameFormState extends ConsumerState<NameForm> {
       message = '';
     });
     try {
-      await ref.read(nameFormServiceProvider).submit(name!);
+      final responseMessage =
+          await ref.read(nameFormServiceProvider).submit(name!);
       setState(() {
         requestStatus = RequestStatus.success;
-        message = 'Submitted successfully!';
+        message = responseMessage;
       });
     } catch (e) {
       setState(() {
