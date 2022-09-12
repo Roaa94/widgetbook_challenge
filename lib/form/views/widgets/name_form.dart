@@ -38,7 +38,8 @@ class _NameFormState extends ConsumerState<NameForm> {
     } catch (e) {
       setState(() {
         requestStatus = RequestStatus.error;
-        message = e is CustomException ? e.message : e.toString();
+        message =
+            e is CustomException ? e.message : 'An unexpected error occurred!';
       });
     }
   }
